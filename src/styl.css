@@ -8,18 +8,16 @@ section.pricing {
     border-radius: 1rem;
     transition: all 0.2s;
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-  }
+    margin-top: 30px;
+    margin-bottom: 50px;
+    height: 350px;
+   }
   
   .pricing hr {
     margin: 1.5rem 0;
   }
   
-  .pricing .card-title {
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
-    letter-spacing: .1rem;
-    font-weight: bold;
-  }
+   
   
   .pricing .card-price {
     font-size: 3rem;
@@ -44,20 +42,61 @@ section.pricing {
     letter-spacing: .1rem;
     font-weight: bold;
     padding: 1rem;
-    opacity: 0.7;
-    transition: all 0.2s;
+    /* opacity: 0.7; */
+    /* transition: all 0.2s; */
   }
   
-  /* Hover Effects on Card */
-  
-  @media (min-width: 992px) {
-    .pricing .card:hover {
-      margin-top: -.25rem;
-      margin-bottom: .25rem;
-      box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
-    }
-  
-    .pricing .card:hover .btn {
-      opacity: 1;
-    }
-  }
+   
+
+.dashcntr{
+  background-color: #007bff;
+  margin-top: 80px;
+  height: 500px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  padding-top: 50px;
+ }
+
+.wlcm{
+  background-color:#007bff;
+margin-top: 10px;
+font-weight: bold;
+font-size: 100px;
+}
+
+#btun{
+  background-color: white;
+  color: black;
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 300px;
+  height: 70px;
+
+}
+
+.col-lg-4{
+  font-weight: bold;
+}
+
+h1{
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+#regcon{
+  margin-top: 50px;
+}
+ 
+.card-title {
+  font-weight: bold;
+  font-size: larger;
+}
+
+#logoutbtn{
+  margin-left: 90%;
+  margin-top: 10px;
+}
