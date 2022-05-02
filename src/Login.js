@@ -15,6 +15,8 @@ function Login({setuserid}) {
             try {
                 console.log(values);
                let data = await axios.post("http://localhost:3001/login", values)
+                window.localStorage.setItem("token", data.data.token);
+
                window.localStorage.setItem("email", data.data.user.email);
                window.localStorage.setItem("name", data.data.user.firstname);
                console.log(data.data.message);

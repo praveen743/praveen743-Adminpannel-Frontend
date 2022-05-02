@@ -14,6 +14,8 @@ function Dashboard() {
       window.localStorage.setItem("name",null);
       window.localStorage.setItem("nextplan",null);
       window.localStorage.setItem("email",null);
+      window.localStorage.setItem("token",null);
+
       navigate("/")
     }
 

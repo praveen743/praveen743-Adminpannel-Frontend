@@ -17,7 +17,11 @@ const[nextplan,setnextplan]= useState( );
       }, [])
 
       async function load(){
-        let data = await axios.get(`http://localhost:3001/card/${name}`);
+        let data = await axios.get(`http://localhost:3001/card/${name}`,{
+            headers: {
+                Authorization: window.localStorage.getItem("token")
+            }
+        });
         console.log(data.data)
 
         console.log("currentplan",data.data[0].plan)
