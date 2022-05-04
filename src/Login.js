@@ -5,6 +5,17 @@ import { useNavigate } from 'react-router';
 
 
 function Login({setuserid}) {
+
+async function active(){
+    var email = window.localStorage.getItem("email");
+console.log(email);
+    let data = await axios.put("http://localhost:3001/loginactive",{email:email},{
+        headers: {
+            Authorization: window.localStorage.getItem("token")
+        }
+    })
+}
+
     let navigate = useNavigate();
     const formik = useFormik({
         initialValues: {
@@ -22,10 +33,9 @@ function Login({setuserid}) {
                console.log(data.data.message);
                console.log(data.data);
 
-               
-
-               if(data.data.message=="login"){
+                if(data.data.message=="login"){
                     navigate("/dashboard");
+                    active();
                }else if(data.data.message=="email id or password incorrect"){
                    alert("incorrect password or userid");
                }
@@ -50,7 +60,8 @@ function Login({setuserid}) {
                         <div className='col-lg-6'><input type="password" className='form-control'
                             onChange={formik.handleChange} value={formik.values.password} name='password'></input></div>
                     </div>
-                    <div className='col-lg-12 mt-5'><input type="submit" className='btn btn-primary' value="Login"></input></div>
+                    <div className='col-lg-12 mt-5'><input type="submit" className='btn'
+                     id="paybtn" value="Login"></input></div>
                     </div>
             </form>
         </div>
